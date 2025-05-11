@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2i07ejxvldh1"]
+
+[ext_resource type="PackedScene" uid="uid://ilotptxf5ekf" path="res://Assets/poolgame/four.blend" id="1_5rjj5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n1c64"]
+radius = 0.0293257
+
+[node name="fourball" type="RigidBody3D"]
+mass = 0.203
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122538, 0, 0.033127)
+shape = SubResource("SphereShape3D_n1c64")
+
+[node name="four" parent="CollisionShape3D" instance=ExtResource("1_5rjj5")]

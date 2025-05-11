@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmfhl5rtesypl"]
+
+[ext_resource type="PackedScene" uid="uid://728007gs8gex" path="res://Assets/poolgame/six.blend" id="1_8byq2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n1c64"]
+radius = 0.0293257
+
+[node name="sixball" type="RigidBody3D"]
+mass = 0.203
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122538, 0, 0.033127)
+shape = SubResource("SphereShape3D_n1c64")
+
+[node name="six" parent="CollisionShape3D" instance=ExtResource("1_8byq2")]

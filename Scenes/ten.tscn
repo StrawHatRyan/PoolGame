@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ra4k2ysh5cmq"]
+
+[ext_resource type="PackedScene" uid="uid://vkxkdr0d01x" path="res://Assets/poolgame/ten.blend" id="1_s7gfq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n1c64"]
+radius = 0.0293257
+
+[node name="tenball" type="RigidBody3D"]
+mass = 0.203
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122538, 0, 0.033127)
+shape = SubResource("SphereShape3D_n1c64")
+
+[node name="ten" parent="CollisionShape3D" instance=ExtResource("1_s7gfq")]

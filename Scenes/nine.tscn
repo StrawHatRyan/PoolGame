@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxr871oduam5y"]
+
+[ext_resource type="PackedScene" uid="uid://dko2otd1ctn0l" path="res://Assets/poolgame/nine.blend" id="1_jgsyp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n1c64"]
+radius = 0.0293257
+
+[node name="nineball" type="RigidBody3D"]
+mass = 0.203
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122538, 0, 0.033127)
+shape = SubResource("SphereShape3D_n1c64")
+
+[node name="nine" parent="CollisionShape3D" instance=ExtResource("1_jgsyp")]

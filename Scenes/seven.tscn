@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxnpxmn18sifq"]
+
+[ext_resource type="PackedScene" uid="uid://upjdlfleel7k" path="res://Assets/poolgame/seven.blend" id="1_lbb0b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n1c64"]
+radius = 0.0293257
+
+[node name="sevenball" type="RigidBody3D"]
+mass = 0.203
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122538, 0, 0.033127)
+shape = SubResource("SphereShape3D_n1c64")
+
+[node name="seven" parent="CollisionShape3D" instance=ExtResource("1_lbb0b")]

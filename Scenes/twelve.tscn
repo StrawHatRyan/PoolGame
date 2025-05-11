@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs31nuvt0uomg"]
+
+[ext_resource type="PackedScene" uid="uid://c052sh77eafgt" path="res://Assets/poolgame/twelve.blend" id="1_ykq6h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n1c64"]
+radius = 0.0293257
+
+[node name="twelveball" type="RigidBody3D"]
+mass = 0.203
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122538, 0, 0.033127)
+shape = SubResource("SphereShape3D_n1c64")
+
+[node name="twelve" parent="CollisionShape3D" instance=ExtResource("1_ykq6h")]
